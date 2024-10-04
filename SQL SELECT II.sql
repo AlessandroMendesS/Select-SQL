@@ -42,13 +42,25 @@ where exists (
 )
 
 -- Exercício 11 SELECT II
-
-
+SELECT DISTINCT sigla_depto 
+	FROM funcionario
+	WHERE salario > (SELECT AVG(salario) FROM funcionario);
 
 -- Exercício 12 SELECT II
 
+SELECT DISTINCT sigla_depto 
+	FROM funcionario
+    WHERE sigla_depto LIKE '%Costa%';
 
 -- Exercício 13 SELECT II
+
+  SELECT sigla_depto FROM funcionario 
+    WHERE EXISTS (
+    SELECT * FROM funcionario
+    WHERE salario > (SELECT AVG(salario) FROM funcionario)
+    );
+
+
 
 
 
