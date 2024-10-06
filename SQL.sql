@@ -91,3 +91,4 @@ WHERE codfuncionario = 10;
 ALTER TABLE funcionario
 MODIFY COLUMN data_admissao DATE NOT NULL,
 MODIFY COLUMN salario DECIMAL(10, 2) NOT NULL;
+-- 
